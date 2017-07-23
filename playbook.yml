@@ -1,0 +1,9 @@
+---
+- hosts: all
+  vars:
+    additional_prefered_packages:
+      - htop
+    additional_unwanted_packages:
+      - joe
+  roles:
+    - role: packages

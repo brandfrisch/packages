@@ -1,0 +1,25 @@
+---
+# defaults file for packages
+
+additional_present_packages: []
+additional_absent_packages: []
+
+present_packages:
+  - "apt-transport-https"
+  - "curl"
+  - "git"
+  - "iotop"
+  - "lsof"
+  - "net-tools"
+  - "nmap"
+  - "python-httplib2"
+  - "rsync"
+  - "sysstat"
+  - "unzip"
+  - "wget"
+  - "vim"
+  - "mailutils"
+  - "htop"
+
+absent_packages:
+  - "rpcbind"

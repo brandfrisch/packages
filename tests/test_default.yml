@@ -1,0 +1,51 @@
+---
+- hosts: all
+  gather_facts: no
+  vars:
+    goss:
+      package:
+        apt-transport-https:
+          installed: true
+        curl:
+          installed: true
+        git:
+          installed: true
+        htop:
+          installed: true
+        iotop:
+          installed: true
+        lsof:
+          installed: true
+        mailutils:
+          installed: true
+        net-tools:
+          installed: true
+        nmap:
+          installed: true
+        python-httplib2:
+          installed: true
+        rsync:
+          installed: true
+        sysstat:
+          installed: true
+        unzip:
+          installed: true
+        vim:
+          installed: true
+        wget:
+          installed: true
+        joe:
+          installed: false
+
+
+  pre_tasks:
+
+    - name: Copy tests to remote
+      copy:
+        content: "{{ goss | to_nice_yaml }}"
+        dest: "/tmp/goss.yml"
+
+    - name: test goss files
+      goss:
+        path: "/tmp/goss.yml"
+        format: documentation

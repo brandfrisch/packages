@@ -1,0 +1,22 @@
+---
+# tasks file for packages
+
+- name: Install prefered packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ present_packages | union(additional_present_packages) }}"
+  tags:
+    - packages
+    - package
+
+- name: Remove unwanted packages
+  package:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - "{{ absent_packages | union(additional_absent_packages) }}"
+  tags:
+    - packages
+    - package
