@@ -21,5 +21,4 @@ present_packages:
   - "mailutils"
   - "htop"
 
-absent_packages:
-  - "rpcbind"
+absent_packages: []
