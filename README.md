@@ -1,4 +1,4 @@
-Packages [![Build Status](https://travis-ci.org/brandfrisch/packages.svg?branch=master)](https://travis-ci.org/brandfrisch/packages)
+Packages
 =========
 
 This is a rule to setup packages on a unix system
