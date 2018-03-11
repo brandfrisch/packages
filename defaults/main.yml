@@ -20,5 +20,7 @@ present_packages:
   - "vim"
   - "mailutils"
   - "htop"
+  - "jq"
+  - "swaks"
 
 absent_packages: []
